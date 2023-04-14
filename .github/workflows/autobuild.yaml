@@ -91,7 +91,7 @@ jobs:
     name: Build ${{ matrix.config.name }}
     needs: create_release
     if: always() && needs.create_release.result == 'success'
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
